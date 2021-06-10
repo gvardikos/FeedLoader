@@ -16,12 +16,16 @@ class RemoteFeedLoader {
     }
 
     func load() {
-        client.baseUrl = URL(string: "https//:a-url")!
+        client.get(from: URL(string: "https//:a-url")!)
     }
 }
 
 class HttpClient {
     var baseUrl: URL?
+
+    func get(from url: URL) {
+        self.baseUrl = url
+    }
 }
 
 class FeedLoaderTests: XCTestCase {
