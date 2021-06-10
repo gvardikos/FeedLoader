@@ -77,8 +77,7 @@
 			children = (
 				EC26768D2672A6D900FBC22D /* FeedLoader.h */,
 				EC26768E2672A6D900FBC22D /* Info.plist */,
-				EC2676A62672A74C00FBC22D /* FeedItem.swift */,
-				EC2676AA2672AE0700FBC22D /* FeedLoader.swift */,
+				EC2676AE2672AEDC00FBC22D /* FeedLoader */,
 			);
 			path = FeedLoader;
 			sourceTree = "<group>";
@@ -90,6 +89,15 @@
 				EC26769A2672A6D900FBC22D /* Info.plist */,
 			);
 			path = FeedLoaderTests;
+			sourceTree = "<group>";
+		};
+		EC2676AE2672AEDC00FBC22D /* FeedLoader */ = {
+			isa = PBXGroup;
+			children = (
+				EC2676AA2672AE0700FBC22D /* FeedLoader.swift */,
+				EC2676A62672A74C00FBC22D /* FeedItem.swift */,
+			);
+			name = FeedLoader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
