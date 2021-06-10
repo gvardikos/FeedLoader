@@ -8,24 +8,6 @@
 import XCTest
 @testable import FeedLoader
 
-class RemoteFeedLoader {
-    let client: HttpClient
-    let url: URL?
-
-    init(httpClient: HttpClient, url: URL) {
-        self.client = httpClient
-        self.url = url
-    }
-
-    func load() {
-        client.get(from: self.url!)
-    }
-}
-
-protocol HttpClient {
-    func get(from url: URL)
-}
-
 class FeedLoaderTests: XCTestCase {
 
     func test_client_urlInNil() {
