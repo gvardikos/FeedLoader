@@ -11,6 +11,7 @@
 		EC2676992672A6D900FBC22D /* FeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2676982672A6D900FBC22D /* FeedLoaderTests.swift */; };
 		EC26769B2672A6D900FBC22D /* FeedLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = EC26768D2672A6D900FBC22D /* FeedLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC2676A72672A74C00FBC22D /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2676A62672A74C00FBC22D /* FeedItem.swift */; };
+		EC2676AB2672AE0700FBC22D /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2676AA2672AE0700FBC22D /* FeedLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		EC2676982672A6D900FBC22D /* FeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderTests.swift; sourceTree = "<group>"; };
 		EC26769A2672A6D900FBC22D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC2676A62672A74C00FBC22D /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		EC2676AA2672AE0700FBC22D /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				EC26768D2672A6D900FBC22D /* FeedLoader.h */,
 				EC26768E2672A6D900FBC22D /* Info.plist */,
 				EC2676A62672A74C00FBC22D /* FeedItem.swift */,
+				EC2676AA2672AE0700FBC22D /* FeedLoader.swift */,
 			);
 			path = FeedLoader;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC2676AB2672AE0700FBC22D /* FeedLoader.swift in Sources */,
 				EC2676A72672A74C00FBC22D /* FeedItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
