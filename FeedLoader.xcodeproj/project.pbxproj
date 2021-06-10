@@ -10,6 +10,7 @@
 		EC2676942672A6D900FBC22D /* FeedLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC26768A2672A6D900FBC22D /* FeedLoader.framework */; };
 		EC2676992672A6D900FBC22D /* FeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2676982672A6D900FBC22D /* FeedLoaderTests.swift */; };
 		EC26769B2672A6D900FBC22D /* FeedLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = EC26768D2672A6D900FBC22D /* FeedLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC2676A72672A74C00FBC22D /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2676A62672A74C00FBC22D /* FeedItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		EC2676932672A6D900FBC22D /* FeedLoaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedLoaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2676982672A6D900FBC22D /* FeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderTests.swift; sourceTree = "<group>"; };
 		EC26769A2672A6D900FBC22D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC2676A62672A74C00FBC22D /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				EC26768D2672A6D900FBC22D /* FeedLoader.h */,
 				EC26768E2672A6D900FBC22D /* Info.plist */,
+				EC2676A62672A74C00FBC22D /* FeedItem.swift */,
 			);
 			path = FeedLoader;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				TargetAttributes = {
 					EC2676892672A6D900FBC22D = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 					EC2676922672A6D900FBC22D = {
 						CreatedOnToolsVersion = 12.3;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC2676A72672A74C00FBC22D /* FeedItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +346,7 @@
 		EC26769F2672A6D900FBC22D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +362,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.georgevardikos.FeedLoader;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +371,7 @@
 		EC2676A02672A6D900FBC22D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -387,6 +395,7 @@
 		EC2676A22672A6D900FBC22D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FeedLoaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +413,7 @@
 		EC2676A32672A6D900FBC22D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FeedLoaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
