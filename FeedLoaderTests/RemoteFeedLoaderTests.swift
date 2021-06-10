@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import FeedLoader
+import FeedLoader
 
 class RemoteFeedLoaderTests: XCTestCase {
 
@@ -23,7 +23,7 @@ class RemoteFeedLoaderTests: XCTestCase {
 
         sut.load()
 
-        XCTAssertEqual(client.baseUrl, sut.url)
+        XCTAssertEqual(client.baseUrl, url)
     }
 
     // MARK: Helpers
