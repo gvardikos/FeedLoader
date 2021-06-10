@@ -8,7 +8,7 @@
 import XCTest
 @testable import FeedLoader
 
-class FeedLoaderTests: XCTestCase {
+class RemoteFeedLoaderTests: XCTestCase {
 
     func test_client_urlInNil() {
         let url = URL(string: "https://a-url")!
