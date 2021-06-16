@@ -22,11 +22,12 @@ public final class RemoteFeedLoader {
     }
 
     public func load(completion: @escaping (Error) -> Void) {
-        client.get(from: url) { response, error in
-            if error != nil {
-                completion(.connectivity)
-            } else {
+        client.get(from: url) { (response) in
+            switch response {
+            case .success:
                 completion(.invalidData)
+            case .fail:
+                completion(.connectivity)
             }
         }
     }
