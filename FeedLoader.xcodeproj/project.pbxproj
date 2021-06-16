@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		EC2676942672A6D900FBC22D /* FeedLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC26768A2672A6D900FBC22D /* FeedLoader.framework */; };
-		EC2676992672A6D900FBC22D /* FeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2676982672A6D900FBC22D /* FeedLoaderTests.swift */; };
+		EC2676992672A6D900FBC22D /* RemoteFeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2676982672A6D900FBC22D /* RemoteFeedLoaderTests.swift */; };
 		EC26769B2672A6D900FBC22D /* FeedLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = EC26768D2672A6D900FBC22D /* FeedLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC2676A72672A74C00FBC22D /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2676A62672A74C00FBC22D /* FeedItem.swift */; };
+		EC2676AB2672AE0700FBC22D /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2676AA2672AE0700FBC22D /* FeedLoader.swift */; };
+		EC2676D62672BA4500FBC22D /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2676D52672BA4500FBC22D /* RemoteFeedLoader.swift */; };
+		EC2676DA2672BA5A00FBC22D /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2676D92672BA5A00FBC22D /* HttpClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,9 +31,12 @@
 		EC26768D2672A6D900FBC22D /* FeedLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedLoader.h; sourceTree = "<group>"; };
 		EC26768E2672A6D900FBC22D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC2676932672A6D900FBC22D /* FeedLoaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedLoaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC2676982672A6D900FBC22D /* FeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderTests.swift; sourceTree = "<group>"; };
+		EC2676982672A6D900FBC22D /* RemoteFeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoaderTests.swift; sourceTree = "<group>"; };
 		EC26769A2672A6D900FBC22D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC2676A62672A74C00FBC22D /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		EC2676AA2672AE0700FBC22D /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
+		EC2676D52672BA4500FBC22D /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
+		EC2676D92672BA5A00FBC22D /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +81,8 @@
 			children = (
 				EC26768D2672A6D900FBC22D /* FeedLoader.h */,
 				EC26768E2672A6D900FBC22D /* Info.plist */,
-				EC2676A62672A74C00FBC22D /* FeedItem.swift */,
+				EC2676DF2672BB5200FBC22D /* FeedAPI */,
+				EC2676AE2672AEDC00FBC22D /* FeedLoader */,
 			);
 			path = FeedLoader;
 			sourceTree = "<group>";
@@ -83,10 +90,28 @@
 		EC2676972672A6D900FBC22D /* FeedLoaderTests */ = {
 			isa = PBXGroup;
 			children = (
-				EC2676982672A6D900FBC22D /* FeedLoaderTests.swift */,
+				EC2676982672A6D900FBC22D /* RemoteFeedLoaderTests.swift */,
 				EC26769A2672A6D900FBC22D /* Info.plist */,
 			);
 			path = FeedLoaderTests;
+			sourceTree = "<group>";
+		};
+		EC2676AE2672AEDC00FBC22D /* FeedLoader */ = {
+			isa = PBXGroup;
+			children = (
+				EC2676AA2672AE0700FBC22D /* FeedLoader.swift */,
+				EC2676A62672A74C00FBC22D /* FeedItem.swift */,
+			);
+			name = FeedLoader;
+			sourceTree = "<group>";
+		};
+		EC2676DF2672BB5200FBC22D /* FeedAPI */ = {
+			isa = PBXGroup;
+			children = (
+				EC2676D52672BA4500FBC22D /* RemoteFeedLoader.swift */,
+				EC2676D92672BA5A00FBC22D /* HttpClient.swift */,
+			);
+			name = FeedAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +223,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC2676AB2672AE0700FBC22D /* FeedLoader.swift in Sources */,
+				EC2676D62672BA4500FBC22D /* RemoteFeedLoader.swift in Sources */,
+				EC2676DA2672BA5A00FBC22D /* HttpClient.swift in Sources */,
 				EC2676A72672A74C00FBC22D /* FeedItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,7 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC2676992672A6D900FBC22D /* FeedLoaderTests.swift in Sources */,
+				EC2676992672A6D900FBC22D /* RemoteFeedLoaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,8 +375,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = J6U2C28868;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -361,6 +392,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.georgevardikos.FeedLoader;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -372,8 +405,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = J6U2C28868;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -386,6 +422,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.georgevardikos.FeedLoader;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -396,7 +434,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = J6U2C28868;
 				INFOPLIST_FILE = FeedLoaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -405,6 +445,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.georgevardikos.FeedLoaderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -414,7 +456,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = J6U2C28868;
 				INFOPLIST_FILE = FeedLoaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -423,6 +467,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.georgevardikos.FeedLoaderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
