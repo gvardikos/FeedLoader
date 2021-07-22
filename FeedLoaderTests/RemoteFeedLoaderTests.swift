@@ -64,9 +64,22 @@ class RemoteFeedLoaderTests: XCTestCase {
         let (client, sut) = makeSUT()
 
         expect(sut, toCompleteWithError: .invalidData, when: {
-            let invalidJSON = Data.init("invalid json".utf8)
+            let invalidJSON = Data("invalid json".utf8)
             client.complete(withStatusCode: 200, data: invalidJSON)
         })
+    }
+
+    /// Ensure when receiving a json from server with an empty items list that an empty array will be returned.
+    func test_deliversNoItemsWithHttp200ResponseAndEmptyJSONList() {
+        let (httpClientSpy, sut) = makeSUT()
+
+        var capturedResults = [RemoteFeedLoader.Result]()
+        sut.load() { capturedResults.append($0) }
+
+        let emptyListJSON = Data("{\"items\": []}".utf8)
+        httpClientSpy.complete(withStatusCode: 200, data: emptyListJSON)
+
+        XCTAssertEqual(capturedResults, [.success([])])
     }
 
     // MARK: Helpers
