@@ -8,7 +8,7 @@
 import Foundation
 
 public final class RemoteFeedLoader {
-    private let client: HttpClient
+    private let httpClient: HttpClient
     private let url: URL
 
     public enum Error: Swift.Error {
@@ -22,12 +22,13 @@ public final class RemoteFeedLoader {
     }
 
     public init(httpClient: HttpClient, url: URL) {
-        self.client = httpClient
+        self.httpClient = httpClient
         self.url = url
     }
 
     public func load(completion: @escaping (Result) -> Void) {
-        client.get(from: url) { (response) in
+
+        httpClient.get(from: url) { (response) in
             switch response {
             case .success:
                 completion(.failure(.invalidData))
