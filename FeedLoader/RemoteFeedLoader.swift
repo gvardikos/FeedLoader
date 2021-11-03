@@ -29,14 +29,14 @@ public final class RemoteFeedLoader {
     public func load(completion: @escaping (Result) -> Void) {
         httpClient.get(from: url) { clientResponse in
             switch clientResponse {
-            case let .success(data, response):
+            case let .successResult(data, response):
                 do {
                     let items = try FeedItemMapper.map(data, response)
                     completion(.success(items))
                 } catch {
                     completion(.failure(.invalidData))
                 }
-            case .fail:
+            case .failResult:
                 completion(.failure(.connectivity))
             }
         }

@@ -7,11 +7,11 @@
 
 import Foundation
 
-public enum HTTPClientResponse {
-    case success(Data, HTTPURLResponse)
-    case fail(Error)
+public enum HTTPClientResult {
+    case successResult(Data, HTTPURLResponse)
+    case failResult(Error)
 }
 
 public protocol HttpClient {
-    func get(from url: URL, completion: @escaping (HTTPClientResponse) -> Void)
+    func get(from url: URL, completion: @escaping (HTTPClientResult) -> Void)
 }
