@@ -83,8 +83,8 @@
 			children = (
 				EC26768D2672A6D900FBC22D /* FeedLoader.h */,
 				EC26768E2672A6D900FBC22D /* Info.plist */,
-				EC2676DF2672BB5200FBC22D /* FeedAPI */,
-				EC2676AE2672AEDC00FBC22D /* FeedLoader */,
+				EC2676AE2672AEDC00FBC22D /* Feed Feature */,
+				EC2676DF2672BB5200FBC22D /* Feed API */,
 			);
 			path = FeedLoader;
 			sourceTree = "<group>";
@@ -98,23 +98,23 @@
 			path = FeedLoaderTests;
 			sourceTree = "<group>";
 		};
-		EC2676AE2672AEDC00FBC22D /* FeedLoader */ = {
+		EC2676AE2672AEDC00FBC22D /* Feed Feature */ = {
 			isa = PBXGroup;
 			children = (
 				EC2676AA2672AE0700FBC22D /* FeedLoader.swift */,
 				EC2676A62672A74C00FBC22D /* FeedItem.swift */,
 			);
-			name = FeedLoader;
+			name = "Feed Feature";
 			sourceTree = "<group>";
 		};
-		EC2676DF2672BB5200FBC22D /* FeedAPI */ = {
+		EC2676DF2672BB5200FBC22D /* Feed API */ = {
 			isa = PBXGroup;
 			children = (
 				EC2676D52672BA4500FBC22D /* RemoteFeedLoader.swift */,
 				EC2676D92672BA5A00FBC22D /* HttpClient.swift */,
 				ECB5F18D2732A456003D19B9 /* FeedItemMapper.swift */,
 			);
-			name = FeedAPI;
+			name = "Feed API";
 			sourceTree = "<group>";
 		};
 		EC3419E12732E85800DCA4E2 /* Feed API */ = {
