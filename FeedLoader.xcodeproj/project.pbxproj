@@ -92,7 +92,7 @@
 		EC2676972672A6D900FBC22D /* FeedLoaderTests */ = {
 			isa = PBXGroup;
 			children = (
-				EC2676982672A6D900FBC22D /* RemoteFeedLoaderTests.swift */,
+				EC3419E12732E85800DCA4E2 /* Feed API */,
 				EC26769A2672A6D900FBC22D /* Info.plist */,
 			);
 			path = FeedLoaderTests;
@@ -115,6 +115,14 @@
 				ECB5F18D2732A456003D19B9 /* FeedItemMapper.swift */,
 			);
 			name = FeedAPI;
+			sourceTree = "<group>";
+		};
+		EC3419E12732E85800DCA4E2 /* Feed API */ = {
+			isa = PBXGroup;
+			children = (
+				EC2676982672A6D900FBC22D /* RemoteFeedLoaderTests.swift */,
+			);
+			path = "Feed API";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
